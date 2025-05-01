@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Optional: ignore log files
+*.log
+
+# Optional: OS-specific
+.DS_Store
