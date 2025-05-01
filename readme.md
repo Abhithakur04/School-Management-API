@@ -157,3 +157,8 @@ d = 2 * r * asin(
       √(sin²((lat2 - lat1) / 2) + 
          cos(lat1) * cos(lat2) * sin²((lng2 - lng1) / 2))
     )
+ ## Deployment
+
+You can view the live version of this application by clicking on the following link:
+
+[Live Application](https://school-management-api-n8gk.onrender.com)
