@@ -1,4 +1,4 @@
-# 🏫 School Location API (Node.js + MySQL)
+# 🏫 School Management  API (Node.js + MySQL)
 
 This is a backend API built using **Node.js**, **Express**, and **MySQL** for managing schools and retrieving them based on geographical proximity. It supports:
 
