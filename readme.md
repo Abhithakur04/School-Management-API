@@ -17,7 +17,7 @@ This is a backend API built using **Node.js**, **Express**, and **MySQL** for ma
 ---
 
 ## 📂 Folder Structure
-
+```
 school-api/
 ├── node_modules/          
 ├── routes/
@@ -31,7 +31,7 @@ school-api/
 ├── package.json             
 ├── package-lock.json         
 ├── README.md                 
-
+```
 
 ---
 
@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS schools (
   latitude FLOAT NOT NULL,
   longitude FLOAT NOT NULL
 );
+```
 
 ## 📘 School Table Schema
 
@@ -85,7 +86,7 @@ Each record in the `schools` table contains the following fields:
   "latitude": 28.4595,
   "longitude": 77.0266
 }
-  
+```
 ---
 
 ### 🧠 How It Works:
@@ -100,7 +101,7 @@ Each record in the `schools` table contains the following fields:
 {
   "message": "School added successfully"
 }
- 
+```
 ### 2️⃣ GET `/listSchools?lat=LAT&lng=LNG`
 📍 **Get all schools sorted by distance from a given location**
 
@@ -114,7 +115,7 @@ Each record in the `schools` table contains the following fields:
 ### ✅ Example Request:
 ```bash
 GET /listSchools?lat=28.456&lng=77.044
-
+```
 ---
 
 ### 🧠 How It Works:
@@ -146,6 +147,7 @@ GET /listSchools?lat=28.456&lng=77.044
     "distance": 2.10
   }
 ]
+```
 ---
 
 ### 📐 Haversine Formula (How Distance Is Calculated)
@@ -157,6 +159,7 @@ d = 2 * r * asin(
       √(sin²((lat2 - lat1) / 2) + 
          cos(lat1) * cos(lat2) * sin²((lng2 - lng1) / 2))
     )
+```
  ## Deployment
 
 You can view the live version of this application by clicking on the following link:
