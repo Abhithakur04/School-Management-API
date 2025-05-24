@@ -15,9 +15,32 @@ const getDistance = (lat1, lon1, lat2, lon2) => {
   return R * c;
 };
 
-router.get("/",(req,res)=>{
-  res.send("Backend is live ! please type /addSchool to add tyhe school or /listSchools to see all the schools");
-})
+// Root route to confirm the backend is running.
+//temporary frontend guide
+router.get("/", (req, res) => {
+  res.send(`
+    <h1>📚 School Locator API is Live!</h1>
+    <p>Welcome to the backend API.</p>
+    <h3>Available Endpoints:</h3>
+    <ul>
+      <li><strong>POST /addSchool</strong> - Add a new school</li>
+      <li><strong>GET /listSchools?lat=YOUR_LAT&lng=YOUR_LNG</strong> - List all schools sorted by distance</li>
+    </ul>
+    <h3>Usage Guide:</h3>
+    <p>1️⃣ Use <strong>/addSchool</strong> with JSON body like:</p>
+    <pre>
+{
+  "name": "ABC High School",
+  "address": "123 Main St",
+  "latitude": 28.7041,
+  "longitude": 77.1025
+}
+    </pre>
+    <p>2️⃣ Then access <strong>/listSchools?lat=28.7041&lng=77.1025</strong> in the browser to see nearby schools.</p>
+    <p style="color: gray;">🚀 Happy Testing!</p>
+  `);
+});
+
 // addschool api
 
 router.post("/addSchool", async (req, res) => {
