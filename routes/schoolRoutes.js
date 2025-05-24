@@ -15,9 +15,12 @@ const getDistance = (lat1, lon1, lat2, lon2) => {
   return R * c;
 };
 
+router.get("/",(req,res)=>{
+  res.send("Backend is live ! please type /addSchool to add tyhe school or /listSchools to see all the schools");
+})
 // addschool api
-//addSchool
-router.post("/", async (req, res) => {
+
+router.post("/addSchool", async (req, res) => {
   const { name, address, latitude, longitude } = req.body;
 
   // validateion checks
