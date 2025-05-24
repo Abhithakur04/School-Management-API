@@ -16,6 +16,7 @@ const getDistance = (lat1, lon1, lat2, lon2) => {
 };
 
 // addschool api
+//addSchool
 router.post("/", async (req, res) => {
   const { name, address, latitude, longitude } = req.body;
 
